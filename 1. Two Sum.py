@@ -12,7 +12,7 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        lookup = {}
+        lookup = {} #创建字典并存放第一个元素
         for i, num in enumerate(nums):            
             if target - num in lookup:
                 return [lookup[target-num], i]
