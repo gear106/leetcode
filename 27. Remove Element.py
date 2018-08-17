@@ -23,7 +23,7 @@ class Solution2:
         :type val: int
         :rtype: int
         """
-        for num in nums[:]:
+        for num in nums[:]:  # 这里需要对nums做拷贝，直接使用nums会出错
             if num == val:
                 nums.remove(num)
         return len(nums)
