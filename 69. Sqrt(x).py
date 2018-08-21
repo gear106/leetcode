@@ -4,7 +4,10 @@ Created on Tue Aug 21 21:00:26 2018
 
 @author: GEAR
 """
-
+'''
+解题思路：
+采用牛顿迭代法 x[n+1] = x[n] - f(x[n]) / diff(f(x[n]))
+'''
 class Solution:
     def mySqrt(self, x):
         """
