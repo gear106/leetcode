@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Aug 20 20:01:18 2018
+Created on Tue Aug 21 20:04:03 2018
 
 @author: GEAR
 """
+'''
+''表示没有任何字符， ' '表示有一个空格字符
+利用递归思想计算对应数的个数再加上对用的数
+'''
 
-class Solution1:
+class Solution:
     def countAndSay(self, n):
         """
         :type n: int
@@ -13,9 +17,9 @@ class Solution1:
         """
         if n == 1:
             return '1'
-        s = self.countAndSay(n-1) + '*'
+        s = self.countAndSay(n-1) + ' '
         res, count = '', 1
-        for i in range(len(s) - 1):
+        for i in range(len(s)-1):
             if s[i] == s[i+1]:
                 count += 1
             else:
@@ -26,5 +30,5 @@ class Solution1:
         
 
 if __name__ == '__main__':
-    s = Solution1()
+    s = Solution()
     print(s.countAndSay(3))
