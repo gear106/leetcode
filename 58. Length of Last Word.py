@@ -11,11 +11,7 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        if s[-1] == '':
-            return 0
-        else:
-            s = s.split()
-            return len(s[-1])
+        return len(s.strip().split(' ')[-1])
     
 s = Solution()
 s1 = 'Hello World'
