@@ -21,8 +21,8 @@ class Solution:
             while dividend >= temp:
                 dividend -= temp
                 res += i
-                i = i << 1
-                temp = temp << 1
+                i = i << 10
+                temp = temp << 10
                 
         if not positive:
             res = -res
